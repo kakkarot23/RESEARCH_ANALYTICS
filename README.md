@@ -1,6 +1,6 @@
 # 📱 TellCo Telecommunication User Analytics & Interactive Web App
 
-[![CI/CD Pipeline](https://github.com/tellco/telecom-user-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/tellco/telecom-user-analytics/actions/workflows/ci.yml)
+[![CI/CD Pipeline](https://github.com/kakkarot23/RESEARCH_ANALYTICS/actions/workflows/ci.yml/badge.svg)](https://github.com/kakkarot23/RESEARCH_ANALYTICS/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Streamlit App](https://img.shields.io/badge/Streamlit-1.60.0-FF4B4B.svg)](https://streamlit.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -13,7 +13,27 @@ An end-to-end data science, machine learning, and business analytics application
 
 ![TellCo Dashboard Recording](artifacts/dashboard_demo.webp)
 
-> **Note:** The animated recording above demonstrates live user navigation across all 6 analytical modules of the Streamlit web app, including SQL query execution on the exported database table.
+---
+
+## 📸 Output Screenshots Gallery
+
+### 1. Executive Briefing & Buy Recommendation
+![Executive Summary](artifacts/screenshots/01_executive_summary.png)
+
+### 2. Task 1: User Overview Analysis & Handset Ecosystem
+![Task 1 User Overview](artifacts/screenshots/02_task1_user_overview.png)
+
+### 3. Task 2: User Engagement Analysis & K-Means Clustering
+![Task 2 User Engagement](artifacts/screenshots/03_task2_user_engagement.png)
+
+### 4. Task 3: Experience Analytics (Throughput, TCP, Latency)
+![Task 3 Experience Analytics](artifacts/screenshots/04_task3_experience_analytics.png)
+
+### 5. Task 4: User Satisfaction & Machine Learning Prediction ($R^2 = 0.9983$)
+![Task 4 Satisfaction ML](artifacts/screenshots/05_task4_satisfaction_ml.png)
+
+### 6. Task 4.6: Database Export & Custom SQL Query Execution
+![Task 4.6 Database Export](artifacts/screenshots/06_task4_6_database_query.png)
 
 ---
 
@@ -23,8 +43,8 @@ An end-to-end data science, machine learning, and business analytics application
 
 1. **Clone the Repository & Navigate to Folder:**
    ```bash
-   git clone https://github.com/tellco/telecom-user-analytics.git
-   cd telecom-user-analytics
+   git clone https://github.com/kakkarot23/RESEARCH_ANALYTICS.git
+   cd RESEARCH_ANALYTICS
    ```
 
 2. **Install the `tellco_analytics` Package via Pip:**
@@ -111,6 +131,13 @@ d:/PROJECT 1
 │   └── test_satisfaction.py
 ├── artifacts/                         # MLOps artifacts, reports, and recordings
 │   ├── dashboard_demo.webp            # WebP Dashboard Animation
+│   ├── screenshots/                   # PNG Output Screenshots Gallery
+│   │   ├── 01_executive_summary.png
+│   │   ├── 02_task1_user_overview.png
+│   │   ├── 03_task2_user_engagement.png
+│   │   ├── 04_task3_experience_analytics.png
+│   │   ├── 05_task4_satisfaction_ml.png
+│   │   └── 06_task4_6_database_query.png
 │   ├── mlops_tracking/
 │   └── TellCo_Executive_Report_and_Slides.md # 20-Slide Presentation Deck
 ├── data/                              # Data folder (CSV, Parquet, SQLite DB)
