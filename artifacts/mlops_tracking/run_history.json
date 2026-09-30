@@ -1,0 +1,50 @@
+[
+    {
+        "run_id": "run_1790799368",
+        "run_name": "TellCo_Satisfaction_RF_Run",
+        "source": "scripts/run_pipeline.py",
+        "code_version": "v1.0.0",
+        "start_time": "2026-10-01T01:46:08.900519",
+        "status": "COMPLETED",
+        "end_time": "2026-10-01T01:46:08.900531",
+        "parameters": {
+            "n_estimators": 100,
+            "random_state": 42,
+            "model_type": "RandomForestRegressor"
+        },
+        "metrics": {
+            "r2_score": 0.9983340098814804,
+            "rmse": 0.01651729724603722,
+            "mse": 0.00027282110831394865
+        },
+        "artifact_paths": [
+            "data/cleaned_telecom_data.csv",
+            "data/tellco_analytics.db",
+            "artifacts/mlops_tracking\\run_1790799368_model.pkl"
+        ]
+    },
+    {
+        "run_id": "run_1790799405",
+        "run_name": "TellCo_Satisfaction_RF_Run",
+        "source": "scripts/run_pipeline.py",
+        "code_version": "v1.0.0",
+        "start_time": "2026-10-01T01:46:45.301117",
+        "status": "COMPLETED",
+        "end_time": "2026-10-01T01:46:45.301129",
+        "parameters": {
+            "n_estimators": 100,
+            "random_state": 42,
+            "model_type": "RandomForestRegressor"
+        },
+        "metrics": {
+            "r2_score": 0.9983556667360894,
+            "rmse": 0.01640958867362997,
+            "mse": 0.000269274600437725
+        },
+        "artifact_paths": [
+            "data/cleaned_telecom_data.csv",
+            "data/tellco_analytics.db",
+            "artifacts/mlops_tracking\\run_1790799405_model.pkl"
+        ]
+    }
+]

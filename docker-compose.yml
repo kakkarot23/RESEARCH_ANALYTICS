@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  tellco-analytics-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tellco_analytics_container
+    ports:
+      - "8501:8501"
+    environment:
+      - PORT=8501
+    volumes:
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts
+    restart: always
