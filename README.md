@@ -87,7 +87,7 @@ An end-to-end data science, machine learning, and business analytics application
 
 ---
 
-### Option 2: Docker Container Execution
+## Option 2: Docker Container Execution
 
 You can run the entire application inside an isolated Docker container:
 
