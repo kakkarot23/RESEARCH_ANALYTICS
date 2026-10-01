@@ -1,0 +1,100 @@
+{
+  "project_title": "TellCo Telecommunication User Analytics & Interactive Web App",
+  "author": "kakkarot23",
+  "repository": "https://github.com/kakkarot23/RESEARCH_ANALYTICS",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "TellCo Telecommunication User Analytics",
+      "subtitle": "End-to-End Investment Due Diligence & Subscriber Intelligence",
+      "image": "masterppt/images/01_executive_summary.png",
+      "key_points": [
+        "106,893 Active Subscribers Analyzed",
+        "41.1% Apple Market Share Leader",
+        "54% Gaming & Streaming Traffic Dominance",
+        "Random Forest Satisfaction Model R^2 = 0.9983",
+        "Investment Thesis: BUY — Undervalued Target (+25-30% ARPU potential)"
+      ],
+      "ai_prompt": "Create an executive dark-themed cover slide for a telecom acquisition due diligence report titled 'TellCo Telecommunication User Analytics' with metrics: 106k users, 41% Apple share, 54% gaming traffic, and BUY recommendation."
+    },
+    {
+      "slide_number": 2,
+      "title": "Task 1: User Overview Analysis & Handset Ecosystem",
+      "subtitle": "Exploratory Data Analysis, Decile Segmentation & PCA",
+      "image": "masterppt/images/02_task1_user_overview.png",
+      "key_points": [
+        "Top Handsets: iPhone 12, Galaxy S20, iPhone 11 Pro",
+        "Manufacturer Breakdown: Apple (41.1%), Samsung (34.7%), Huawei (14.3%)",
+        "Decile Class Duration: Top 10% users consume >42% total duration",
+        "PCA Component Drivers: PC1 (52.3% variance) captures traffic, PC2 (18.6%) captures duration"
+      ],
+      "ai_prompt": "Create a 2-column slide showing telecom handset ecosystem statistics: Top manufacturers (Apple 41.1%, Samsung 34.7%), top devices (iPhone 12, Galaxy S20), and PCA variance breakdown."
+    },
+    {
+      "slide_number": 3,
+      "title": "Task 2: User Engagement Analysis & K-Means Clustering",
+      "subtitle": "Session Frequency, Duration & Bandwidth Aggregation (k=3 Clusters)",
+      "image": "masterppt/images/03_task2_user_engagement.png",
+      "key_points": [
+        "Metrics: Session Frequency, Total Duration, Total Traffic Bytes",
+        "K-Means Optimal k=3: Elbow Method WCSS inflection point",
+        "Cluster 0 (Low Engagement): 62% of subscribers",
+        "Cluster 1 (Medium Engagement): 28% of subscribers",
+        "Cluster 2 (High Engagement / Power Users): 10% of subscribers driving 54% total traffic"
+      ],
+      "ai_prompt": "Create a slide on telecom user engagement clustering with 3 segments: Cluster 0 Low (62%), Cluster 1 Medium (28%), Cluster 2 High (10% users driving 54% traffic), and highlight K-Means Elbow Method."
+    },
+    {
+      "slide_number": 4,
+      "title": "Task 3: Experience Analytics & Network Quality",
+      "subtitle": "Throughput, TCP Retransmissions & Latency RTT",
+      "image": "masterppt/images/04_task3_experience_analytics.png",
+      "key_points": [
+        "Average Throughput: 12.4 Mbps DL bearer throughput (Apple: 14.2 Mbps)",
+        "TCP Retransmissions: 3G devices suffer 3x higher packet loss (>450KB retransmissions)",
+        "RTT Latency: Network average 52ms (Gaming sessions peak at 110ms)",
+        "Experience Clustering: Classifies users into Outstanding, Satisfactory, and Degraded Network Experience"
+      ],
+      "ai_prompt": "Create a slide titled 'Network Experience Analytics' showing metrics for Throughput (12.4 Mbps), Latency RTT (52ms), and TCP Retransmission loss per handset type."
+    },
+    {
+      "slide_number": 5,
+      "title": "Task 4: User Satisfaction & Machine Learning Regression",
+      "subtitle": "Random Forest Predictive Model (R^2 = 0.9983)",
+      "image": "masterppt/images/05_task4_satisfaction_ml.png",
+      "key_points": [
+        "Satisfaction Score: Euclidean distance between Engagement & Experience scores",
+        "Random Forest Performance: R^2 = 0.9983, RMSE = 0.0164, MSE = 0.00027",
+        "Feature Importance: Engagement Score (54%) & Bearer Throughput (31%) drive satisfaction",
+        "Satisfaction Clusters: K-Means k=2 segments subscribers into High Satisfaction (78%) vs Dissatisfied (22%)"
+      ],
+      "ai_prompt": "Create a slide on Telecom Satisfaction Machine Learning featuring Random Forest R^2 = 0.9983, RMSE = 0.0164, Feature Importance bar chart, and Euclidean score formulas."
+    },
+    {
+      "slide_number": 6,
+      "title": "Task 4.6 & MLOps: Database Export & Query Execution",
+      "subtitle": "SQLite Export, Custom SQL Execution & MLflow Tracking",
+      "image": "masterppt/images/06_task4_6_database_query.png",
+      "key_points": [
+        "SQLite Exporter: Writes user satisfaction metrics to data/tellco_analytics.db",
+        "SQL Query Runner: Embedded interactive query engine for custom business reporting",
+        "MLOps Experiment Tracker: Logs hyperparameters, RMSE, MSE, R^2 metrics, and timestamps",
+        "CI/CD Pipeline: Automated pytest test suite covering data cleaning, engagement, and ML"
+      ],
+      "ai_prompt": "Create a slide showcasing database export and MLOps tracking: SQLite database integration, interactive SQL query runner, and experiment tracking logs."
+    },
+    {
+      "slide_number": 7,
+      "title": "Power BI Integration & Strategic Action Plan",
+      "subtitle": "Star-Schema Data Model, DAX Measures & Investment Roadmap",
+      "key_points": [
+        "Power BI Ecosystem: Pre-built 1-click PBIDS, PBIP, and Star Schema tables (Fact_Subscriber_Sessions, Dim_Handset_Device)",
+        "DAX Measures: Pre-computed Gaming Traffic %, Throughput kbps, and Satisfaction Index",
+        "Strategic Action 1: Introduce gaming bandwidth prioritization packages (+15% revenue impact)",
+        "Strategic Action 2: Target 3G handset upgrade promo to transition budget users to 4G/5G",
+        "Final Valuation Conclusion: STRONG BUY recommendation for TellCo Telecommunication"
+      ],
+      "ai_prompt": "Create a conclusion slide for a telecom M&A deck featuring a Power BI star-schema summary, DAX KPIs, 3 strategic growth initiatives, and a final BUY recommendation."
+    }
+  ]
+}

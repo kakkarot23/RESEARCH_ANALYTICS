@@ -168,6 +168,12 @@ d:/PROJECT 1
 │   ├── dax_measures.dax               # Library of DAX formulas for KPIs & Metrics
 │   ├── powerbi_report_config.json     # Power BI Report & Visual Layout Specification
 │   └── README.md                      # Power BI Dashboard Setup & Usage Guide
+├── masterppt/                         # Executive PowerPoint Deck, AI Prompts & Master Presentation Guide
+│   ├── TellCo_Analytics_Master_Presentation.pptx # Generated 16:9 Widescreen PPTX Deck
+│   ├── master_presentation_guide.md   # Chronological Master Document & Speaker Scripts
+│   ├── ppt_prompt_content.json        # Structured JSON AI Prompts (Gamma/Copilot/Marp)
+│   ├── generate_master_ppt.py         # Automated PPTX Presentation Generator Script
+│   └── images/                        # Self-contained Gallery of Dashboard Screenshots
 ├── data/                              # Data folder (CSV, Parquet, SQLite DB)
 ├── Dockerfile                         # Container definition
 ├── docker-compose.yml                 # Multi-container orchestration
