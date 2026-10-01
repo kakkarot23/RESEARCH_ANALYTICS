@@ -1,0 +1,13 @@
+{
+  "version": "0.1",
+  "connections": [
+    {
+      "details": {
+        "protocol": "file",
+        "path": "D:\\PROJECT 1\\power_bi_dashboard\\PowerBI_TellCo_Analytics_Model.xlsx"
+      },
+      "options": {},
+      "mode": "DirectQuery"
+    }
+  ]
+}

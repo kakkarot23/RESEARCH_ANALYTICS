@@ -1,0 +1,135 @@
+{
+  "name": "TellCo_Analytics_Model",
+  "compatibilityLevel": 1550,
+  "model": {
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "tables": [
+      {
+        "name": "Fact_Subscriber_Sessions",
+        "columns": [
+          {
+            "name": "MSISDN_Number",
+            "dataType": "string",
+            "sourceColumn": "MSISDN_Number"
+          },
+          {
+            "name": "Dur._ms",
+            "dataType": "int64",
+            "sourceColumn": "Dur._ms"
+          },
+          {
+            "name": "Handset_Manufacturer",
+            "dataType": "string",
+            "sourceColumn": "Handset_Manufacturer"
+          },
+          {
+            "name": "Handset_Type",
+            "dataType": "string",
+            "sourceColumn": "Handset_Type"
+          },
+          {
+            "name": "Total_Data_Bytes",
+            "dataType": "int64",
+            "sourceColumn": "Total_Data_Bytes"
+          },
+          {
+            "name": "Avg_Bearer_TP_DL_kbps",
+            "dataType": "double",
+            "sourceColumn": "Avg_Bearer_TP_DL_kbps"
+          },
+          {
+            "name": "Avg_RTT_DL_ms",
+            "dataType": "double",
+            "sourceColumn": "Avg_RTT_DL_ms"
+          },
+          {
+            "name": "Gaming_DL_Bytes",
+            "dataType": "int64",
+            "sourceColumn": "Gaming_DL_Bytes"
+          },
+          {
+            "name": "Gaming_UL_Bytes",
+            "dataType": "int64",
+            "sourceColumn": "Gaming_UL_Bytes"
+          },
+          {
+            "name": "Youtube_DL_Bytes",
+            "dataType": "int64",
+            "sourceColumn": "Youtube_DL_Bytes"
+          },
+          {
+            "name": "Netflix_DL_Bytes",
+            "dataType": "int64",
+            "sourceColumn": "Netflix_DL_Bytes"
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total Active Subscribers",
+            "expression": "DISTINCTCOUNT(Fact_Subscriber_Sessions[MSISDN_Number])"
+          },
+          {
+            "name": "Total Data Traffic (GB)",
+            "expression": "SUM(Fact_Subscriber_Sessions[Total_Data_Bytes]) / (1024 * 1024 * 1024)"
+          },
+          {
+            "name": "Gaming Traffic Share %",
+            "expression": "DIVIDE((SUM(Fact_Subscriber_Sessions[Gaming_DL_Bytes]) + SUM(Fact_Subscriber_Sessions[Gaming_UL_Bytes])) / (1024 * 1024 * 1024), [Total Data Traffic (GB)], 0)"
+          },
+          {
+            "name": "Average Throughput (kbps)",
+            "expression": "AVERAGE(Fact_Subscriber_Sessions[Avg_Bearer_TP_DL_kbps])"
+          },
+          {
+            "name": "Average Latency RTT (ms)",
+            "expression": "AVERAGE(Fact_Subscriber_Sessions[Avg_RTT_DL_ms])"
+          }
+        ]
+      },
+      {
+        "name": "Dim_User_Analytics_Summary",
+        "columns": [
+          {
+            "name": "MSISDN_Number",
+            "dataType": "string",
+            "sourceColumn": "MSISDN_Number"
+          },
+          {
+            "name": "Total_Sessions",
+            "dataType": "int64",
+            "sourceColumn": "Total_Sessions"
+          },
+          {
+            "name": "Total_Duration_ms",
+            "dataType": "int64",
+            "sourceColumn": "Total_Duration_ms"
+          },
+          {
+            "name": "Satisfaction_Score",
+            "dataType": "double",
+            "sourceColumn": "Satisfaction_Score"
+          }
+        ],
+        "measures": [
+          {
+            "name": "Avg Satisfaction Score",
+            "expression": "AVERAGE(Dim_User_Analytics_Summary[Satisfaction_Score])"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "Rel_Subscriber_Sessions_Summary",
+        "fromTable": "Fact_Subscriber_Sessions",
+        "fromColumn": "MSISDN_Number",
+        "toTable": "Dim_User_Analytics_Summary",
+        "toColumn": "MSISDN_Number"
+      }
+    ]
+  }
+}
