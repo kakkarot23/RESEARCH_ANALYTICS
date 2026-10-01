@@ -1,6 +1,6 @@
 # 📱 TellCo Telecommunication User Analytics & Interactive Web App
 
-[![CI/CD Pipeline](https://github.com/kakkarot23/RESEARCH_ANALYTICS/actions/workflows/ci.yml/badge.svg)](https://github.com/kakkarot23/RESEARCH_ANALYTICS/actions/workflows/ci.yml)
+[![CI/CD Pipeline](https://github.com/masterj23s25j27-sys/MOBILE_ANALYTICS_WORKS/actions/workflows/ci.yml/badge.svg)](https://github.com/masterj23s25j27-sys/MOBILE_ANALYTICS_WORKS/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Streamlit App](https://img.shields.io/badge/Streamlit-1.60.0-FF4B4B.svg)](https://streamlit.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -15,25 +15,46 @@ An end-to-end data science, machine learning, and business analytics application
 
 ---
 
-## 📸 Output Screenshots Gallery
+## 📸 Output Screenshots & Application Interface Graphs Gallery
 
 ### 1. Executive Briefing & Buy Recommendation
 ![Executive Summary](artifacts/screenshots/01_executive_summary.png)
+* **Key Visuals & Metrics:** Analyzed 106,893 subscribers, Apple market share (41.1%), Gaming bandwidth dominance (54%), and Random Forest Satisfaction Model $R^2 = 0.9983$. Features strategic Buy thesis and cross-domain findings across Overview, Engagement, Experience, and Satisfaction analytics.
 
 ### 2. Task 1: User Overview Analysis & Handset Ecosystem
 ![Task 1 User Overview](artifacts/screenshots/02_task1_user_overview.png)
+* **Key Visuals & Graphs:** 
+  * Top 10 Handset Devices Bar Chart (iPhone 12, Galaxy S20, iPhone 11 Pro, etc.).
+  * Top 3 Manufacturers Pie Chart (Apple: 41.1%, Samsung: 34.7%, Huawei: 14.3%).
+  * Decile Class Duration Segmentation Data Table.
+  * Principal Component Analysis (PCA Component Drivers: PC1 ~52.3% variance, PC2 ~18.6% variance).
 
 ### 3. Task 2: User Engagement Analysis & K-Means Clustering
 ![Task 2 User Engagement](artifacts/screenshots/03_task2_user_engagement.png)
+* **Key Visuals & Graphs:**
+  * Top 10 Customers Dataframes per Metric (Session Frequency, Duration, Total Data Traffic Bytes).
+  * K-Means Elbow Method Curve Graph showing optimal $k=3$ cluster inflection.
+  * Cluster Statistics Table (Cluster 0: Low Engagement, Cluster 1: Medium Engagement, Cluster 2: High Engagement).
 
 ### 4. Task 3: Experience Analytics (Throughput, TCP, Latency)
 ![Task 3 Experience Analytics](artifacts/screenshots/04_task3_experience_analytics.png)
+* **Key Visuals & Graphs:**
+  * Average Bearer Throughput (kbps) & TCP Retransmissions (Bytes) per Handset Type.
+  * K-Means $k=3$ Experience Clustering Summary Table (Latency, Throughput, Retransmission Loss).
 
 ### 5. Task 4: User Satisfaction & Machine Learning Prediction ($R^2 = 0.9983$)
 ![Task 4 Satisfaction ML](artifacts/screenshots/05_task4_satisfaction_ml.png)
+* **Key Visuals & Graphs:**
+  * Top 10 Satisfied Subscribers Ranking Table.
+  * Random Forest Regression Performance Metrics ($R^2 = 0.9983$, $RMSE = 0.0164$, $MSE = 0.00027$).
+  * Feature Importance Bar Chart (Engagement Score & Throughput as primary satisfaction drivers).
 
 ### 6. Task 4.6: Database Export & Custom SQL Query Execution
 ![Task 4.6 Database Export](artifacts/screenshots/06_task4_6_database_query.png)
+* **Key Visuals & Graphs:**
+  * Interactive SQL Query Runner executing custom SELECT queries against SQLite database `data/tellco_analytics.db`.
+  * Real-time query output table showing `user_satisfaction_scores`.
+  * MLOps Tracking History table showing recorded experiment runs, timestamps, and parameters.
 
 ---
 
@@ -43,8 +64,8 @@ An end-to-end data science, machine learning, and business analytics application
 
 1. **Clone the Repository & Navigate to Folder:**
    ```bash
-   git clone https://github.com/kakkarot23/RESEARCH_ANALYTICS.git
-   cd RESEARCH_ANALYTICS
+   git clone https://github.com/masterj23s25j27-sys/MOBILE_ANALYTICS_WORKS.git
+   cd MOBILE_ANALYTICS_WORKS
    ```
 
 2. **Install the `tellco_analytics` Package via Pip:**
@@ -138,8 +159,7 @@ d:/PROJECT 1
 │   │   ├── 04_task3_experience_analytics.png
 │   │   ├── 05_task4_satisfaction_ml.png
 │   │   └── 06_task4_6_database_query.png
-│   ├── mlops_tracking/
-│   └── TellCo_Executive_Report_and_Slides.md # 20-Slide Presentation Deck
+│   └── mlops_tracking/
 ├── data/                              # Data folder (CSV, Parquet, SQLite DB)
 ├── Dockerfile                         # Container definition
 ├── docker-compose.yml                 # Multi-container orchestration
