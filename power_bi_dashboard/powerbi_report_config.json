@@ -1,0 +1,32 @@
+{
+  "name": "TellCo Telecommunication Power BI Analytics Dashboard",
+  "version": "1.0",
+  "theme": "Executive Dark Mode",
+  "pages": [
+    {
+      "pageName": "Executive Overview",
+      "visuals": [
+        {"type": "KPI Card", "title": "Total Active Subscribers", "field": "Total Active Subscribers"},
+        {"type": "KPI Card", "title": "Total Data Traffic (GB)", "field": "Total Data Traffic (GB)"},
+        {"type": "KPI Card", "title": "Gaming Traffic Share %", "field": "Gaming Traffic Share %"},
+        {"type": "Donut Chart", "title": "Handset Manufacturer Market Share", "category": "Handset_Manufacturer", "values": "Total Active Subscribers"},
+        {"type": "Bar Chart", "title": "Top 10 Handset Devices", "category": "Handset_Type", "values": "Total xDR Sessions"}
+      ]
+    },
+    {
+      "pageName": "User Engagement & Experience",
+      "visuals": [
+        {"type": "Scatter Plot", "title": "Throughput vs TCP Retransmission", "xAxis": "Average Throughput (kbps)", "yAxis": "Average TCP Retransmission (Bytes)"},
+        {"type": "Clustered Column Chart", "title": "Application Data Traffic Comparison", "categories": ["Gaming", "Youtube", "Netflix", "Google", "Email"]},
+        {"type": "Table", "title": "Top 10 Engaged Subscribers", "columns": ["MSISDN_Number", "Total_Sessions", "Total_Duration_ms", "Total_Data_Bytes"]}
+      ]
+    },
+    {
+      "pageName": "Satisfaction ML & Investment Due Diligence",
+      "visuals": [
+        {"type": "Gauge", "title": "Random Forest ML R^2 Accuracy", "value": 0.9983, "min": 0, "max": 1.0},
+        {"type": "Card", "title": "Investment Buy Recommendation", "text": "BUY - Undervalued Operator (25-30% monetization potential)"}
+      ]
+    }
+  ]
+}

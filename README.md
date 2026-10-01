@@ -160,6 +160,14 @@ d:/PROJECT 1
 │   │   ├── 05_task4_satisfaction_ml.png
 │   │   └── 06_task4_6_database_query.png
 │   └── mlops_tracking/
+├── power_bi_dashboard/               # Power BI Star Schema Models, DAX Measures & Report Schemas
+│   ├── Fact_Subscriber_Sessions.csv   # Star Schema Fact Table
+│   ├── Dim_Handset_Device.csv         # Dimension Table: Devices & Manufacturers
+│   ├── Dim_User_Analytics_Summary.csv # Dimension Table: User Aggregates
+│   ├── PowerBI_TellCo_Analytics_Model.xlsx # 1-Click Power BI Excel Data Model
+│   ├── dax_measures.dax               # Library of DAX formulas for KPIs & Metrics
+│   ├── powerbi_report_config.json     # Power BI Report & Visual Layout Specification
+│   └── README.md                      # Power BI Dashboard Setup & Usage Guide
 ├── data/                              # Data folder (CSV, Parquet, SQLite DB)
 ├── Dockerfile                         # Container definition
 ├── docker-compose.yml                 # Multi-container orchestration

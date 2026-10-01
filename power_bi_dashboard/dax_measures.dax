@@ -1,0 +1,39 @@
+// ===============================================================================
+// Power BI DAX Measures Library for TellCo Telecom Analytics
+// ===============================================================================
+
+// 1. Overview Measures
+Total Active Subscribers = DISTINCTCOUNT(Fact_Subscriber_Sessions[MSISDN_Number])
+
+Total xDR Sessions = COUNT(Fact_Subscriber_Sessions[Dur._ms])
+
+Total Data Traffic (GB) = SUM(Fact_Subscriber_Sessions[Total_Data_Bytes]) / (1024 * 1024 * 1024)
+
+Total Duration (Hours) = SUM(Fact_Subscriber_Sessions[Dur._ms]) / (1000 * 3600)
+
+// 2. Bandwidth & Application Dominance
+Gaming Data Traffic (GB) = (SUM(Fact_Subscriber_Sessions[Gaming_DL_Bytes]) + SUM(Fact_Subscriber_Sessions[Gaming_UL_Bytes])) / (1024 * 1024 * 1024)
+
+Youtube Data Traffic (GB) = (SUM(Fact_Subscriber_Sessions[Youtube_DL_Bytes]) + SUM(Fact_Subscriber_Sessions[Youtube_UL_Bytes])) / (1024 * 1024 * 1024)
+
+Netflix Data Traffic (GB) = (SUM(Fact_Subscriber_Sessions[Netflix_DL_Bytes]) + SUM(Fact_Subscriber_Sessions[Netflix_UL_Bytes])) / (1024 * 1024 * 1024)
+
+Gaming Traffic Share % = DIVIDE([Gaming Data Traffic (GB)], [Total Data Traffic (GB)], 0)
+
+// 3. Network Experience Metrics
+Average Throughput (kbps) = AVERAGE(Fact_Subscriber_Sessions[Avg_Bearer_TP_DL_kbps])
+
+Average Latency RTT (ms) = AVERAGE(Fact_Subscriber_Sessions[Avg_RTT_DL_ms])
+
+Average TCP Retransmission (Bytes) = AVERAGE(Fact_Subscriber_Sessions[TCP_DL_Retrans._Vol_Bytes])
+
+// 4. Customer Satisfaction & Machine Learning Index
+Avg Satisfaction Score = AVERAGE(Dim_User_Analytics_Summary[Satisfaction_Score])
+
+High Value Subscriber Count = CALCULATE(COUNT(Dim_User_Analytics_Summary[MSISDN_Number]), Dim_User_Analytics_Summary[Satisfaction_Score] >= 0.75)
+
+Apple Manufacturer Share % = DIVIDE(
+    CALCULATE(COUNT(Fact_Subscriber_Sessions[MSISDN_Number]), Fact_Subscriber_Sessions[Handset_Manufacturer] = "Apple"),
+    COUNT(Fact_Subscriber_Sessions[MSISDN_Number]),
+    0
+)
