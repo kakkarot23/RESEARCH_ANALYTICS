@@ -1,6 +1,6 @@
 # 📱 TellCo Telecommunication User Analytics & Interactive Web App
 
-[![CI/CD Pipeline](https://github.com/masterj23s25j27-sys/MOBILE_ANALYTICS_WORKS/actions/workflows/ci.yml/badge.svg)](https://github.com/masterj23s25j27-sys/MOBILE_ANALYTICS_WORKS/actions/workflows/ci.yml)
+[![CI/CD Pipeline](https://github.com/kakkarot23/RESEARCH_ANALYTICS/actions/workflows/ci.yml/badge.svg)](https://github.com/kakkarot23/RESEARCH_ANALYTICS/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Streamlit App](https://img.shields.io/badge/Streamlit-1.60.0-FF4B4B.svg)](https://streamlit.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -64,8 +64,8 @@ An end-to-end data science, machine learning, and business analytics application
 
 1. **Clone the Repository & Navigate to Folder:**
    ```bash
-   git clone https://github.com/masterj23s25j27-sys/MOBILE_ANALYTICS_WORKS.git
-   cd MOBILE_ANALYTICS_WORKS
+   git clone https://github.com/kakkarot23/RESEARCH_ANALYTICS.git
+   cd RESEARCH_ANALYTICS
    ```
 
 2. **Install the `tellco_analytics` Package via Pip:**
